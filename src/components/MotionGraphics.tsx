@@ -14,6 +14,8 @@ export default function MotionGraphics() {
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
     const scrollShift = useTransform(smoothProgress, [0, 1], [100, -100]);
     const backgroundY = useTransform(smoothProgress, [0, 1], [0, -200]);
+    const VIDEO_BASE = "https://res.cloudinary.com/dc7wv0ppt/video/upload/f_auto/q_auto/";
+
 
     // 🕊️ Helper for the "Alive" floating animation
     const floatAnimation = (delay = 0) => ({
@@ -101,7 +103,7 @@ export default function MotionGraphics() {
                         />
                         <div className="absolute top-[13%] left-[15.5%] w-[69%] h-[69%] overflow-hidden bg-black shadow-inner">
                             <video
-                                src="/motion/motion1.mp4"
+                                src={`${VIDEO_BASE}motion1_os3yoy.mp4`}
                                 autoPlay loop muted playsInline
                                 className="w-full h-full object-cover"
                             />
@@ -117,7 +119,7 @@ export default function MotionGraphics() {
                         className="w-[27%] md:w-[260px] -ml-6 md:ml-0 -mt-5 md:mt-2 aspect-[9/16] md:h-[500px] flex-shrink-0 rounded-[2rem] shadow-xl overflow-hidden group"
                     >
                         <video
-                            src="/motion/motion2.mp4"
+                            src={`${VIDEO_BASE}motion2_bt0ndl.mp4`}
                             autoPlay loop muted playsInline
                             className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
                         />
@@ -131,7 +133,7 @@ export default function MotionGraphics() {
                             className="w-full aspect-video md:h-[250px] -mt-15 md:-mt-20 flex-shrink-0 rounded-[2rem] md:rounded-[4rem] bg-white shadow-xl overflow-hidden border border-black/5 group"
                         >
                             <video
-                                src="/motion/motion3.mp4"
+                                src={`${VIDEO_BASE}motion3_a2af2v.mp4`}
                                 autoPlay loop muted playsInline
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                             />
@@ -144,7 +146,7 @@ export default function MotionGraphics() {
                                 className="w-[48%] md:w-[230px] md:h-[370px] aspect-[9/16] flex-shrink-0 rounded-[2rem] md:rounded-[1rem] bg-white shadow-xl overflow-hidden border border-black/5"
                             >
                                 <video
-                                    src="/motion/motion4.mp4"
+                                    src={`${VIDEO_BASE}motion4_kjlhye.mp4`}
                                     autoPlay loop muted playsInline
                                     className="w-full h-full object-cover"
                                 />
@@ -156,7 +158,7 @@ export default function MotionGraphics() {
                                 className="w-[48%] md:w-[230px] md:h-[370px] aspect-[9/16] flex-shrink-0 rounded-[2rem] md:rounded-[1rem] bg-white shadow-xl overflow-hidden border border-black/5"
                             >
                                 <video
-                                    src="/motion/motion5.mp4"
+                                    src={`${VIDEO_BASE}motion5_oxtyoo.mp4`}
                                     autoPlay loop muted playsInline
                                     className="w-full h-full object-cover"
                                 />
@@ -171,7 +173,7 @@ export default function MotionGraphics() {
                         className="w-[27%] -mr-6 md:mr-0 -mt-5 md:w-[260px] aspect-[9/16] md:h-[500px] flex-shrink-0 rounded-[2rem] shadow-xl overflow-hidden group"
                     >
                         <video
-                            src="/motion/motion6.mp4"
+                            src={`${VIDEO_BASE}motion6_urhj0r.mp4`}
                             autoPlay loop muted playsInline
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
