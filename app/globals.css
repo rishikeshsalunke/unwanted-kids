@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oi-regular {
+  font-family: "Oi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.perspective {
+  perspective: 1200px;
+}
+
+.ranchers-regular {
+  font-family: "Ranchers", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.akronim-regular {
+  font-family: "Akronim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.henny-penny-regular {
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.squada-one-regular {
+  font-family: "Squada One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+@theme inline {
+  /* Define your custom fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-playfair);
+  --font-heading: "Inter", sans-serif;
+  --font-bebas: var(--font-bebas);
+  --font-monty: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
+  --font-serif-display: var(--font-bodoni);
+  --font-cursive: var(--font-bodoni);
+  
+  /* Define the specific Red from your photo */
+  --color-brand-red: #ff0000; 
+}
+
+:root {
+  --background: #F5F5F0;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.about-text p {
+  line-height: 1.6;
+  color: #e5e7eb; 
+}
