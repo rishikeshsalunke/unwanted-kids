@@ -79,3 +79,20 @@ body {
   line-height: 1.6;
   color: #e5e7eb; 
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.3); /* Red-500 with opacity */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.6);
+}

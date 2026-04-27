@@ -64,7 +64,7 @@ export default function Home() {
 
     // Text content definitions (exactly as provided, no information deleted or changed)
     const descriptions = {
-        rishi: "I'm Rishikesh Salunke — a Software Developer, also working as a freelancer. Currently doing internship at DigitioHub. I am 23 years old and completed BSc IT from Siddharth College. Along with development, I also have strong interest in cinematography and video editing. I do freelancing in both software development and video production.",
+        rishi: "I'm Rishikesh Salunke — a Software Developer and Cinematographer. I am 23 years old and a BSc IT graduate from Siddharth College. Currently, I work as a full-time freelancer, bridging the gap between technical development and creative visual storytelling. My expertise spans building modern software solutions and producing high-quality cinematic video content for clients.",
         rutu: "I'm Rutuja Dalvi — a freelance video editor and cinematographer, deeply passionate about creative content and visual storytelling. I began my journey in late 2025, driven by the urge to create, experiment, and bring ideas to life through motion. A BAMMC graduate from Wilson College, Mumbai, I see editing as more than just cuts and transitions — it’s about feeling, flow, and impact. From freelance projects to content creation, I love shaping raw footage into stories that connect, engage, and stay with the viewer."
     };
 
@@ -177,7 +177,7 @@ export default function Home() {
 
                 <div className="max-w-screen-2xl mx-auto w-full relative z-10 space-y-10">
 
-                    {/* BIOGRAPHY 01: RISHIKESH */}
+                    {/* BIOGRAPHY 01: RUTUJA (Now First) */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -189,80 +189,7 @@ export default function Home() {
                             whileHover={{ scale: 1.02, rotate: -2, y: -5 }}
                             className="md:col-span-5 relative group"
                         >
-                            {/* Studio depth frame accent */}
                             <div className="absolute inset-0 border border-brand-red translate-x-3 translate-y-3 opacity-30 group-hover:opacity-100 transition-all duration-700 rounded-3xl" />
-                            <div className="relative aspect-[10/11] bg-white rounded-3xl shadow-[20px_20px_60px_#ebebe6,-20px_-20px_60px_#ffffff] p-2 md:p-4 overflow-hidden border border-black/[0.03]">
-                                <Image
-                                    src="/about/rishi.png"
-                                    alt="Rishikesh Salunke"
-                                    width={500}
-                                    height={550}
-                                    className="w-full h-full object-cover rounded-2xl grayscale-[0.1] hover:grayscale-0 transition-all duration-1000 mix-blend-multiply"
-                                />
-                            </div>
-                        </motion.div>
-
-                        {/* Architectural Info Layout */}
-                        <div className="md:col-span-7 pt-4 space-y-12">
-                            <div className="space-y-4">
-                                <motion.h2
-                                    whileInView={{ x: 0 }} initial={{ x: 20 }}
-                                    className="inline-block ranchers-regular bg-brand-red text-white px-5 md:px-8 py-2 md:py-3 rounded-full font-black text-xs md:text-2xl tracking-tight italic"
-                                >
-                                    Technical Storyteller // Rishikesh
-                                </motion.h2>
-                                <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-[8px] md:text-sm font-mono uppercase tracking-[0.3em] text-[#333]">
-                                    <p>— BSc IT Grad</p>
-                                    <p>— Software Dev</p>
-                                    <p>— Freelancer</p>
-                                    <p>— Intern @ DigitioHub</p>
-                                </div>
-                            </div>
-
-                            <EditorialText
-                                name="Rishikesh Salunke"
-                                description={descriptions.rishi}
-                            />
-                        </div>
-                    </motion.div>
-
-                    {/* BIOGRAPHY 02: RUTUJA (Flipped Masonry) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 items-start"
-                    >
-                        {/* Architectural Info Layout */}
-                        <div className="md:col-span-7 md:order-1 pt-4 space-y-12 flex flex-col items-end text-right">
-                            <div className="space-y-4 flex flex-col items-end">
-                                <motion.h2
-                                    whileInView={{ x: 0 }} initial={{ x: -20 }}
-                                    className="inline-block ranchers-regular bg-black text-brand-red px-5 md:px-8 py-2 md:py-3 rounded-full font-black text-xs md:text-2xl tracking-tight italic"
-                                >
-                                    Visual Narrative // Rutuja
-                                </motion.h2>
-                                <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-[8px] md:text-sm font-mono uppercase tracking-[0.3em] text-[#333]">
-                                    <p>BAMMC Graduate —</p>
-                                    <p>Wilson College —</p>
-                                    <p>Video Editor —</p>
-                                    <p>Cinematographer —</p>
-                                </div>
-                            </div>
-
-                            <EditorialText
-                                name="Rutuja Dalvi"
-                                description={descriptions.rutu}
-                            />
-                        </div>
-
-                        {/* Masonry Pop Image Container (order flipped) */}
-                        <motion.div
-                            whileHover={{ scale: 1.02, rotate: 2, y: -5 }}
-                            className="relative group md:col-span-5 md:order-2"
-                        >
-                            {/* Studio depth frame accent */}
-                            <div className="absolute inset-0 border border-brand-red -translate-x-3 -translate-y-3 opacity-30 group-hover:opacity-100 transition-all duration-700 rounded-3xl" />
                             <div className="relative aspect-[10/11] bg-white rounded-3xl shadow-[20px_20px_60px_#ebebe6,-20px_-20px_60px_#ffffff] p-2 md:p-4 overflow-hidden border border-black/[0.03]">
                                 <Image
                                     src="/about/rutu.png"
@@ -274,8 +201,99 @@ export default function Home() {
                             </div>
                         </motion.div>
 
+                        {/* Architectural Info Layout */}
+                        <div className="md:col-span-7 pt-4 space-y-12">
+                            <div className="space-y-4">
+                                <div className="mb-8">
+                                    <motion.h2
+                                        whileInView={{ x: 0, opacity: 1 }}
+                                        initial={{ x: 20, opacity: 0 }}
+                                        className="text-[12vw] md:text-[4rem] font-bold text-gray-900 leading-[0.8] tracking-tighter"
+                                    >
+                                        Rutuja<br />
+                                        <span className="text-red-600 italic font-serif font-light md:ml-12">Narrative.</span>
+                                    </motion.h2>
+                                    {/* Subtle Index Label */}
+                                    <div className="mt-4 flex items-center gap-4">
+                                        <span className="font-mono text-[10px] tracking-[0.4em] text-gray-400 uppercase">Biography // 01</span>
+                                        <div className="h-[1px] w-12 bg-red-500/20" />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-[8px] md:text-sm font-mono uppercase tracking-[0.3em] text-[#333]">
+                                    <p>— BAMMC Graduate</p>
+                                    <p>— Wilson College</p>
+                                    <p>— Video Editor</p>
+                                    <p>— Cinematographer</p>
+                                </div>
+                            </div>
+
+                            <EditorialText
+                                name="Rutuja Dalvi"
+                                description={descriptions.rutu}
+                            />
+                        </div>
                     </motion.div>
 
+                    {/* BIOGRAPHY 02: RISHIKESH (Flipped Masonry) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 items-start"
+                    >
+                        {/* Architectural Info Layout */}
+                        <div className="md:col-span-7 md:order-1 pt-4 space-y-12 flex flex-col items-end text-right">
+                            <div className="space-y-4 flex flex-col items-end">
+                                <div className="mb-8 flex flex-col items-end">
+                                    <motion.h2
+                                        whileInView={{ x: 0, opacity: 1 }}
+                                        initial={{ x: -20, opacity: 0 }}
+                                        className="text-[12vw] md:text-[4rem] font-bold text-gray-900 leading-[0.85] tracking-tighter text-right"
+                                    >
+                                        Rishikesh<br />
+                                        <span className="text-red-600 italic font-serif font-light md:mr-16">Storyteller.</span>
+                                    </motion.h2>
+
+                                    {/* Minimal Tagline to replace the 'Pill' */}
+                                    <div className="mt-4 flex items-center gap-4">
+                                        <div className="h-[1px] w-12 bg-red-500/20" />
+                                        <span className="font-mono text-[9px] md:text-[11px] tracking-[0.4em] text-gray-400 uppercase">
+                                            Technical // Strategy
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-[8px] md:text-sm font-mono uppercase tracking-[0.3em] text-[#333]">
+                                    <p>BSc IT Grad —</p>
+                                    <p>Software Dev —</p>
+                                    <p>Freelancer —</p>
+                                    <p>Cinematographer —</p>
+
+                                </div>
+                            </div>
+
+                            <EditorialText
+                                name="Rishikesh Salunke"
+                                description={descriptions.rishi}
+                            />
+                        </div>
+
+                        {/* Masonry Pop Image Container (order flipped) */}
+                        <motion.div
+                            whileHover={{ scale: 1.02, rotate: 2, y: -5 }}
+                            className="relative group md:col-span-5 md:order-2"
+                        >
+                            <div className="absolute inset-0 border border-brand-red -translate-x-3 -translate-y-3 opacity-30 group-hover:opacity-100 transition-all duration-700 rounded-3xl" />
+                            <div className="relative aspect-[10/11] bg-white rounded-3xl shadow-[20px_20px_60px_#ebebe6,-20px_-20px_60px_#ffffff] p-2 md:p-4 overflow-hidden border border-black/[0.03]">
+                                <Image
+                                    src="/about/rishi.png"
+                                    alt="Rishikesh Salunke"
+                                    width={500}
+                                    height={550}
+                                    className="w-full h-full object-cover rounded-2xl grayscale-[0.1] hover:grayscale-0 transition-all duration-1000 mix-blend-multiply"
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 

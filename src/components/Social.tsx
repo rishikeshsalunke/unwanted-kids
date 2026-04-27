@@ -6,12 +6,12 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 export default function Social() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    // Setup for Scroll-Reactive Marquee
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
+    
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
     const scrollShift = useTransform(smoothProgress, [0, 1], [100, -100]);
     const VIDEO_BASE = "https://res.cloudinary.com/dc7wv0ppt/video/upload/f_auto/q_auto/";
@@ -32,7 +32,7 @@ export default function Social() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-[#F5F5F0] py-24 md:py-20 px-4 overflow-hidden"
+            className="relative bg-[#F5F5F0] py-24 md:py-40 px-4 md:px-20 overflow-hidden border-t border-black/5"
         >
 
             {/* 🌪️ CONTINUOUS INFINITE MARQUEE */}
@@ -41,58 +41,45 @@ export default function Social() {
                     style={{ x: scrollShift }}
                     className="flex whitespace-nowrap"
                 >
-                    <motion.div
-                        animate={{ x: [0, "-100%"] }}
-                        transition={{
-                            duration: 35,
-                            repeat: Infinity,
-                            ease: "linear"
-                        }}
-                        className="flex whitespace-nowrap text-[25vw] font-black text-black/[0.02] italic leading-none"
-                    >
-                        <span className="pr-20">VERTICAL</span>
-                        <span className="pr-20">CONTENT</span>
-                        <span className="pr-20">ARCHIVE</span>
-                    </motion.div>
-
-                    {/* Secondary block for seamless looping */}
-                    <motion.div
-                        animate={{ x: [0, "-100%"] }}
-                        transition={{
-                            duration: 35,
-                            repeat: Infinity,
-                            ease: "linear"
-                        }}
-                        className="flex whitespace-nowrap text-[25vw] font-black text-black/[0.02] italic leading-none"
-                    >
-                        <span className="pr-20">VERTICAL</span>
-                        <span className="pr-20">CONTENT</span>
-                        <span className="pr-20">ARCHIVE</span>
-                    </motion.div>
+                    {[...Array(2)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            animate={{ x: [0, "-100%"] }}
+                            transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                            className="flex whitespace-nowrap text-[25vw] font-black text-black/[0.02] italic leading-none uppercase"
+                        >
+                            <span className="pr-20">VERTICAL CONTENT</span>
+                            <span className="pr-20">VERTICAL CONTENT</span>
+                        </motion.div>
+                    ))}
                 </motion.div>
             </div>
 
-            <div className="max-w-6xl mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto relative z-10">
 
-                {/* Modernized Header */}
-                <header className="mb-20 text-center space-y-4">
-                    <motion.span
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        className="text-red-600 font-mono text-[10px] tracking-[0.5em] uppercase block"
+                {/* 🖋️ MATCHED EDITORIAL HEADER */}
+                <header className="max-w-4xl flex flex-col items-start">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        className="flex items-center gap-4 mb-6"
                     >
-                        Content Distribution
-                    </motion.span>
-                    <h2 className="ranchers-regular text-6xl md:text-9xl text-gray-900 tracking-tight">
-                        Social <span className="text-red-600">Sync</span>
+                        <div className="h-[1px] w-12 bg-red-600" />
+                        <span className="text-red-600 font-mono text-[10px] tracking-[0.5em] uppercase font-bold">
+                            Content Distribution
+                        </span>
+                    </motion.div>
+                    
+                    <h2 className="text-[15vw] md:text-[9rem] font-bold text-gray-900 leading-[0.8] tracking-tighter uppercase mb-10 text-left">
+                        Social<br />
+                        <span className="text-red-600 italic font-serif font-light lowercase">Sync.</span>
                     </h2>
                 </header>
 
                 {/* THE "TABLET" CONTAINER */}
                 <div className="relative group max-w-4xl mx-auto">
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-red-600/10 rounded-full blur-3xl group-hover:bg-red-600/20 transition-colors duration-700" />
-                    <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl group-hover:bg-purple-600/20 transition-colors duration-700" />
-
+                    
                     <div className="relative bg-white/60 backdrop-blur-2xl border border-white rounded-[2.5rem] p-4 md:p-10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
 
                         {/* Profile Section */}
@@ -103,8 +90,8 @@ export default function Social() {
                             >
                                 <div className="bg-white p-1 rounded-full">
                                     <img
-                                        src="/about/rutu.png"
-                                        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
+                                        src="/hero5.png"
+                                        className="w-24 h-24 md:w-25 md:h-25 rounded-full object-cover"
                                         alt="Profile"
                                     />
                                 </div>
@@ -113,20 +100,22 @@ export default function Social() {
                                 </div>
                             </motion.div>
 
-                            <div className="text-center md:text-left space-y-2">
-                                <div className="flex flex-col md:flex-row items-center gap-3">
-                                    <h3 className="text-2xl md:text-4xl font-black text-gray-900 tracking-tighter">unwanted__kids</h3>
+                            <div className="text-center md:text-left space-y-4">
+                                <div className="flex flex-col md:flex-row items-center gap-4">
+                                    <h3 className="text-3xl md:text-3xl font-bold text-gray-900 tracking-tighter uppercase leading-none">
+                                        unwanted__kids
+                                    </h3>
                                     <button className="bg-red-600 hover:bg-red-700 text-white text-[10px] font-bold px-6 py-2 rounded-full transition-all uppercase tracking-widest">
                                         Follow
                                     </button>
                                 </div>
-                                <div className="flex justify-center md:justify-start gap-6 font-mono text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">
-                                    <span><b className="text-black">{reels.length}</b> Posts</span>
-                                    <span><b className="text-black">12.4k</b> Reach</span>
-                                    <span><b className="text-black">320</b> Growth</span>
+                                <div className="flex justify-center md:justify-start gap-6 font-mono text-[9px] md:text-[11px] text-gray-500 uppercase tracking-[0.2em]">
+                                    <span><b className="text-black text-sm">{reels.length}</b> Posts</span>
+                                    <span><b className="text-black text-sm">12.4k</b> Reach</span>
+                                    <span><b className="text-black text-sm">320</b> Growth</span>
                                 </div>
-                                <p className="text-sm text-gray-600 max-w-sm font-medium leading-relaxed">
-                                    Cinematic Short-Form <br /> Content & Visual Strategy.
+                                <p className="text-sm md:text-base text-gray-500 max-w-sm font-light leading-relaxed italic font-serif">
+                                    Cinematic Short-Form Content <br /> & Visual Strategy designed to scale.
                                 </p>
                             </div>
                         </div>
@@ -142,8 +131,6 @@ export default function Social() {
                                 >
                                     <video
                                         src={item.video}
-                                        poster={item.thumb}
-                                        // preload="metadata"
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover/item:scale-110"
                                         autoPlay
                                         muted

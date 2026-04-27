@@ -155,27 +155,64 @@ export default function AboutSection() {
                     </div>
 
                     {/* DARK EXPERIENCE CARD */}
+                    {/* DARK EXPERIENCE CARD */}
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="relative bg-gradient-to-br from-[#1e2229] to-[#121418] border border-white/10 p-6 md:p-12 rounded-2xl md:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-md"
+                        className="relative bg-gradient-to-br from-[#1e2229] to-[#121418] border border-white/10 p-6 md:p-12 rounded-2xl md:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-md h-full max-h-[400px] md:max-h-[670px] flex flex-col"
                     >
                         {/* 🔴 Decorative "Recording" light effect */}
-                        <div className="absolute top-6 right-8 flex items-center gap-2">
+                        <div className="absolute top-6 right-8 flex items-center gap-2 z-20">
                             <span className="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse" />
                             <span className="text-[8px] font-mono text-red-600/60 uppercase tracking-widest">Live_History</span>
                         </div>
 
-                        <div className="flex items-center gap-3 md:gap-5 mb-8 md:mb-14">
+                        <div className="flex items-center gap-3 md:gap-5 mb-6 md:mb-10 flex-shrink-0">
                             <div className="w-1 md:w-1.5 h-10 md:h-16 bg-gradient-to-b from-red-500 to-red-800 rounded-full" />
                             <h2 className="text-2xl md:text-6xl font-extralight text-white uppercase tracking-tighter italic">
-                                Work <span className="font-black not-italic text-red-500">History</span>
+                                Work <span className="font-black not-italic text-red-500">Exp.</span>
                             </h2>
                         </div>
 
-                        <div className="space-y-10 md:space-y-16">
-                            {/* PIM Trust */}
+                        {/* 📜 SCROLLABLE AREA - This prevents the card from growing */}
+                        <div className="flex-1 overflow-y-auto pr-2 space-y-10 md:space-y-12 scrollbar-hide custom-scrollbar">
+
+                            {/* 2026 - Dharavi Project */}
+                            <div className="relative group">
+                                <div className="absolute -left-2 top-0 h-full w-[1px] bg-white/5 group-hover:bg-red-500/50 transition-colors" />
+                                <div className="pl-6 md:pl-10">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <span className="text-[9px] md:text-xs text-red-500 font-mono font-bold">2026 //</span>
+                                        <h3 className="font-bold text-sm md:text-2xl text-white uppercase tracking-tight">Dharavi Redevelopment</h3>
+                                    </div>
+                                    <p className="text-[10px] md:text-[14px] text-gray-400 font-light leading-relaxed max-w-md">
+                                        Lead Video Editor | 700+ Video Archives <br />
+                                        <span className="text-gray-400 italic mt-1 block">
+                                            Recording and editing resident testimonies and site documentation for the major redevelopment project.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* 2026 - Social Media Management */}
+                            <div className="relative group">
+                                <div className="absolute -left-2 top-0 h-full w-[1px] bg-white/5 group-hover:bg-red-500/50 transition-colors" />
+                                <div className="pl-6 md:pl-10">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <span className="text-[9px] md:text-xs text-red-500 font-mono font-bold">2026 //</span>
+                                        <h3 className="font-bold text-sm md:text-2xl text-white uppercase tracking-tight">Social Management</h3>
+                                    </div>
+                                    <p className="text-[10px] md:text-[14px] text-gray-400 font-light leading-relaxed max-w-md">
+                                        Content Lead for <span className="text-white/80">Laturkars, Turning Point, Gravitees & WFSS.</span> <br />
+                                        <span className="text-gray-400 italic mt-1 block">
+                                            Directing, shooting, and editing native video content for brand Instagram growth.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* 2025 - PIM Trust */}
                             <div className="relative group">
                                 <div className="absolute -left-2 top-0 h-full w-[1px] bg-white/5 group-hover:bg-red-500/50 transition-colors" />
                                 <div className="pl-6 md:pl-10">
@@ -186,13 +223,13 @@ export default function AboutSection() {
                                     <p className="text-[10px] md:text-[14px] text-gray-400 font-light leading-relaxed max-w-md">
                                         Freelance Video Editor | Cinematographer <br />
                                         <span className="text-gray-400 italic mt-1 block">
-                                            Directing professional podcast productions and large-scale event coverage with a focus on visual rhythm.
+                                            Directing professional podcast productions and large-scale event coverage.
                                         </span>
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Lords Framing */}
+                            {/* 2025 - Lords Framing */}
                             <div className="relative group">
                                 <div className="absolute -left-2 top-0 h-full w-[1px] bg-white/5 group-hover:bg-red-500/50 transition-colors" />
                                 <div className="pl-6 md:pl-10">
@@ -203,22 +240,22 @@ export default function AboutSection() {
                                     <p className="text-[10px] md:text-[14px] text-gray-400 font-light leading-relaxed max-w-md">
                                         Videographer & Social Media Lead <br />
                                         <span className="text-gray-400 italic mt-1 block">
-                                            Managing end-to-end video shooting, digital strategy, and creative post-processing.
+                                            Managing end-to-end video shooting and digital strategy.
                                         </span>
                                     </p>
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Services Footer */}
-                            <div className="pl-6 md:pl-10 pt-8 border-t border-white/5">
-                                <h3 className="font-mono text-[9px] md:text-xs text-gray-400 uppercase mb-4 tracking-[0.3em]">Specialized Services</h3>
-                                <div className="flex flex-wrap gap-2 md:gap-4">
-                                    {["Motion Graphics", "Color Grading", "Cinematography", "VFX"].map((service) => (
-                                        <span key={service} className="text-[7px] md:text-[11px] font-mono text-red-500 border border-red-500/20 px-2 py-1 rounded-sm bg-red-500/5">
-                                            {service}
-                                        </span>
-                                    ))}
-                                </div>
+                        {/* Services Footer - Fixed at bottom */}
+                        <div className="pl-6 md:pl-10 pt-6 mt-6 border-t border-white/5 flex-shrink-0">
+                            <h3 className="font-mono text-[9px] md:text-xs text-gray-400 uppercase mb-4 tracking-[0.3em]">Specialized Services</h3>
+                            <div className="flex flex-wrap gap-2 md:gap-4">
+                                {["Motion Graphics", "Color Grading", "Cinematography", "VFX"].map((service) => (
+                                    <span key={service} className="text-[7px] md:text-[11px] font-mono text-red-500 border border-red-500/20 px-2 py-1 rounded-sm bg-red-500/5">
+                                        {service}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                     </motion.div>
