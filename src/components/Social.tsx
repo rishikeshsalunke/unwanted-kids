@@ -19,14 +19,16 @@ export default function Social() {
     const reels = [
         { video: `${VIDEO_BASE}turn1_ujprtu.mp4`, thumb: "/reels/thumb1.jpg", views: "24.5k" },
         { video: `${VIDEO_BASE}latur1_l5bgeu.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k" },
+        { video: `${VIDEO_BASE}Makeup_Reel_1_yfwqvw.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k" },
         { video: `${VIDEO_BASE}turn2_ykkoet.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" },
         { video: `${VIDEO_BASE}latur2_ghxvul.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
         { video: `${VIDEO_BASE}turn3_ukdlns.mp4`, thumb: "/reels/thumb1.jpg", views: "24.5k" },
         { video: `${VIDEO_BASE}latur3_tswkvd.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k" },
-        { video: `${VIDEO_BASE}turn4_tkurr6.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" },
+        { video: `${VIDEO_BASE}turn4_cdgy4k.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" },
         { video: `${VIDEO_BASE}turn5_kqpyvk.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
         { video: `${VIDEO_BASE}turn6_snt4vf.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
         { video: `${VIDEO_BASE}turn7_y2hhqo.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
+        { video: `${VIDEO_BASE}turn8_tkurr6.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
     ];
 
     return (

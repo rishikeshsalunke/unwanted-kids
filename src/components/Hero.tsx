@@ -211,7 +211,7 @@ export default function Home() {
                                         className="text-[12vw] md:text-[4rem] font-bold text-gray-900 leading-[0.8] tracking-tighter"
                                     >
                                         Rutuja<br />
-                                        <span className="text-red-600 italic font-serif font-light md:ml-12">Narrative.</span>
+                                        <span className="text-red-600 italic font-serif font-light md:ml-12">Creator.</span>
                                     </motion.h2>
                                     {/* Subtle Index Label */}
                                     <div className="mt-4 flex items-center gap-4">
@@ -251,7 +251,7 @@ export default function Home() {
                                         className="text-[12vw] md:text-[4rem] font-bold text-gray-900 leading-[0.85] tracking-tighter text-right"
                                     >
                                         Rishikesh<br />
-                                        <span className="text-red-600 italic font-serif font-light md:mr-16">Storyteller.</span>
+                                        <span className="text-red-600 italic font-serif font-light md:mr-16">Executor.</span>
                                     </motion.h2>
 
                                     {/* Minimal Tagline to replace the 'Pill' */}

@@ -144,13 +144,13 @@ export default function AboutSection() {
                     {/* CONTACT INFO CARD */}
                     <div className="mb-8 md:mb-8 grid grid-cols-1 gap-2 text-[6px] md:text-xs font-mono uppercase tracking-widest text-gray-500">
                         <div className="flex items-center gap-2">
-                            <span className="text-red-500">/</span> <span>Mumbai, India</span>
+                            {/* <span className="text-red-500">/</span> <span>Mumbai, India</span> */}
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="text-red-500">/</span> <span>Multimedia Graduate</span>
+                            {/* <span className="text-red-500">/</span> <span>Multimedia Graduate</span> */}
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="text-red-500">/</span> <span className="break-all">unwantedkid291@gmail.com</span>
+                            {/* <span className="text-red-500">/</span> <span className="break-all">unwantedkid291@gmail.com</span> */}
                         </div>
                     </div>
 
