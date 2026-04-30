@@ -11,24 +11,24 @@ export default function Social() {
         target: containerRef,
         offset: ["start end", "end start"]
     });
-
+    
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
     const scrollShift = useTransform(smoothProgress, [0, 1], [100, -100]);
     const VIDEO_BASE = "https://res.cloudinary.com/dc7wv0ppt/video/upload/f_auto/q_auto/";
 
     const reels = [
-        { video: `${VIDEO_BASE}turn1_ujprtu.mp4`, thumb: "/reels/thumb1.jpg", views: "24.5k", link: "https://www.instagram.com/reel/DWlvfqJDUU6/" },
-        { video: `${VIDEO_BASE}latur1_l5bgeu.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k", link: "https://www.instagram.com/reel/DXB8oE1jLZ-/" },
-        { video: `${VIDEO_BASE}Makeup_Reel_1_yfwqvw.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k", link: "https://www.instagram.com/reel/DXPNa7dDMyB/" },
-        { video: `${VIDEO_BASE}turn2_ykkoet.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" , link: "https://www.instagram.com/reel/DXJwIYXT-4H/"},
-        { video: `${VIDEO_BASE}latur2_ghxvul.mp4`, thumb: "/reels/thumb4.jpg", views: "32k", link: "https://www.instagram.com/reel/DXPNa7dDMyB/" },
-        { video: `${VIDEO_BASE}turn3_ukdlns.mp4`, thumb: "/reels/thumb1.jpg", views: "24.5k", link: "https://www.instagram.com/reel/DWsyPYmIujs/"},
-        { video: `${VIDEO_BASE}latur3_tswkvd.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k", link: "https://www.instagram.com/reel/DXJvvfDDJT9/" },
-        { video: `${VIDEO_BASE}turn8_cdgy4k.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" , link: "https://www.instagram.com/reel/DXvZ_OuobIx/"},
-        { video: `${VIDEO_BASE}turn5_kqpyvk.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" , link: "https://www.instagram.com/reel/DXBYkvso0t5/"},
-        { video: `${VIDEO_BASE}turn6_snt4vf.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" , link: "https://www.instagram.com/reel/DXO5sCVIoZh/"},
-        { video: `${VIDEO_BASE}turn7_y2hhqo.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" , link: "https://www.instagram.com/reel/DXbxve3oMO-/"},
-        { video: `${VIDEO_BASE}turn4_tkurr6.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" , link: "https://www.instagram.com/reel/DW6TW1rISam/"},
+        { video: `${VIDEO_BASE}turn1_ujprtu.mp4`, thumb: "/reels/thumb1.jpg", views: "24.5k" },
+        { video: `${VIDEO_BASE}latur1_l5bgeu.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k" },
+        { video: `${VIDEO_BASE}Makeup_Reel_1_yfwqvw.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k" },
+        { video: `${VIDEO_BASE}turn2_ykkoet.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" },
+        { video: `${VIDEO_BASE}latur2_ghxvul.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
+        { video: `${VIDEO_BASE}turn3_ukdlns.mp4`, thumb: "/reels/thumb1.jpg", views: "24.5k" },
+        { video: `${VIDEO_BASE}latur3_tswkvd.mp4`, thumb: "/reels/thumb2.jpg", views: "18.2k" },
+        { video: `${VIDEO_BASE}turn8_cdgy4k.mp4`, thumb: "/reels/thumb3.jpg", views: "109k" },
+        { video: `${VIDEO_BASE}turn5_kqpyvk.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
+        { video: `${VIDEO_BASE}turn6_snt4vf.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
+        { video: `${VIDEO_BASE}turn7_y2hhqo.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
+        { video: `${VIDEO_BASE}turn4_tkurr6.mp4`, thumb: "/reels/thumb4.jpg", views: "32k" },
     ];
 
     return (
@@ -61,7 +61,7 @@ export default function Social() {
 
                 {/* 🖋️ MATCHED EDITORIAL HEADER */}
                 <header className="max-w-4xl flex flex-col items-start">
-                    <motion.div
+                    <motion.div 
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         className="flex items-center gap-4 mb-6"
@@ -71,7 +71,7 @@ export default function Social() {
                             Content Distribution
                         </span>
                     </motion.div>
-
+                    
                     <h2 className="text-[15vw] md:text-[9rem] font-bold text-gray-900 leading-[0.8] tracking-tighter uppercase mb-10 text-left">
                         Social<br />
                         <span className="text-red-600 italic font-serif font-light lowercase">Sync.</span>
@@ -81,7 +81,7 @@ export default function Social() {
                 {/* THE "TABLET" CONTAINER */}
                 <div className="relative group max-w-4xl mx-auto">
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-red-600/10 rounded-full blur-3xl group-hover:bg-red-600/20 transition-colors duration-700" />
-
+                    
                     <div className="relative bg-white/60 backdrop-blur-2xl border border-white rounded-[2.5rem] p-4 md:p-10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
 
                         {/* Profile Section */}
@@ -123,16 +123,14 @@ export default function Social() {
                         </div>
 
                         {/* REELS GRID */}
-                        {/* REELS GRID */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
                             {reels.map((item, i) => (
                                 <motion.div
                                     key={i}
                                     onHoverStart={() => setHoveredIndex(i)}
                                     onHoverEnd={() => setHoveredIndex(null)}
-                                    className="group/item cursor-default relative aspect-[9/16] rounded-2xl overflow-hidden bg-gray-200 shadow-inner"
+                                    className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-gray-200 shadow-inner group/item"
                                 >
-                                    {/* Video Background */}
                                     <video
                                         src={item.video}
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover/item:scale-110"
@@ -141,48 +139,13 @@ export default function Social() {
                                         loop
                                         playsInline
                                     />
-
-                                    {/* Dark Overlay on Hover */}
-                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-
-                                    {/* View Stats (Top Left) */}
-                                    <div className="absolute top-4 left-4 z-10 opacity-0 -translate-y-2 group-hover/item:translate-y-0 group-hover/item:opacity-100 transition-all duration-300">
-                                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />
-                                            <span className="text-white text-[10px] font-mono font-bold tracking-tighter">{item.views} VIEWS</span>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+                                    <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-10 translate-y-4 opacity-0 group-hover/item:translate-y-0 group-hover/item:opacity-100 transition-all duration-300">
+                                        <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                                            <span className="text-white text-[10px] font-mono font-bold">{item.views}</span>
                                         </div>
                                     </div>
-
-                                    {/* 🔗 ACTION BUTTON (Center/Bottom) */}
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center z-20 opacity-0 translate-y-4 group-hover/item:translate-y-0 group-hover/item:opacity-100 transition-all duration-500 delay-75">
-                                        <button
-                                            onClick={() => item.link && window.open(item.link, "_blank", "noopener,noreferrer")}
-                                            className="group/btn relative overflow-hidden bg-white text-black px-6 py-3 rounded-full flex items-center gap-3 transition-all active:scale-95 shadow-2xl"
-                                        >
-                                            {/* Background hover slide effect */}
-                                            <div className="absolute inset-0 bg-red-600 translate-y-[101%] group-hover/btn:translate-y-0 transition-transform duration-300 ease-out" />
-
-                                            <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] group-hover/btn:text-white transition-colors duration-300">
-                                                Open Reels
-                                            </span>
-
-                                            <svg
-                                                className="relative z-10 w-4 h-4 group-hover/btn:text-white group-hover/btn:rotate-45 transition-all duration-300"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                            </svg>
-                                        </button>
-
-                                        <p className="mt-4 text-[9px] text-white/60 font-mono uppercase tracking-widest">
-                                            Instagram.com
-                                        </p>
-                                    </div>
-
-                                    {/* Bottom Border Glow */}
-                                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600/50 to-transparent translate-y-full group-hover/item:translate-y-0 transition-transform duration-500" />
                                 </motion.div>
                             ))}
                         </div>
